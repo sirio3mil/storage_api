@@ -1,0 +1,9 @@
+# Comments
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**comments** | [**list[Comment]**](Comment.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
