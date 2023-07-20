@@ -241,7 +241,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                 'value': self.get_basic_auth_token()
             }
         
-        if self.access_token:
+        if False:
             settings['oauth2'] = {
                 'type': 'oauth2',
                 'in': 'header',
