@@ -231,6 +231,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The Auth Settings information dict.
         """
 
+        print('hola')
+        print(self.get_basic_auth_token())
+        print('end')
+
         settings = {}
     
         if self.username and self.password:
