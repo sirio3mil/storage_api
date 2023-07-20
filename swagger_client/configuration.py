@@ -249,6 +249,8 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                 'value': 'Bearer ' + self.access_token
             }
         
+        print(settings)
+
         return settings
 
     def to_debug_report(self):
