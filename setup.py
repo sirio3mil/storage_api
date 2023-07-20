@@ -12,7 +12,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "storage-client"
+NAME = "storage_client"
 VERSION = "1.0.2"
 # To install the library, run the following
 #
