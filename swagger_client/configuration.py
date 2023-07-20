@@ -231,10 +231,6 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The Auth Settings information dict.
         """
 
-        print('hola')
-        print(self.get_basic_auth_token())
-        print('end')
-
         settings = {}
     
         if self.username and self.password:
@@ -245,15 +241,13 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                 'value': self.get_basic_auth_token()
             }
         
-        if False:
+        if self.access_token:
             settings['oauth2'] = {
                 'type': 'oauth2',
                 'in': 'header',
                 'key': 'Authorization',
                 'value': 'Bearer ' + self.access_token
             }
-        
-        print(settings)
 
         return settings
 
