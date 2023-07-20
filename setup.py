@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "storage_client"
-VERSION = "1.0.2"
+NAME = "swagger_client"
+VERSION = "1.0.3"
 # To install the library, run the following
 #
 # python setup.py install
