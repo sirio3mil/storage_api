@@ -230,22 +230,26 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
         :return: The Auth Settings information dict.
         """
-        return {
-            'appPassword':
-                {
-                    'type': 'basic',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': self.get_basic_auth_token()
-                },
-            'oauth2':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
-        }
+
+        settings = {}
+    
+        if self.username and self.password:
+            settings['appPassword'] = {
+                'type': 'basic',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': self.get_basic_auth_token()
+            }
+        
+        if self.access_token:
+            settings['oauth2'] = {
+                'type': 'oauth2',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
+            }
+        
+        return settings
 
     def to_debug_report(self):
         """Gets the essential information for debugging.
